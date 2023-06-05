@@ -19,7 +19,7 @@ const Request = () => {
     showSpinner();
     const { name, email, description } = data;
     try {
-      const data = await fetch("/register", {
+      const data = await fetch("https://demelsbackend.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -9,7 +9,7 @@ const Getdata = () => {
   const [getUserData, setgetUserData] = useState([]);
 
   const getData = async () => {
-    const res = await fetch("/getsub", {
+    const res = await fetch("https://demelsbackend.onrender.com/getsub", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -19,7 +19,7 @@ const Form = () => {
   const addData = async (e) => {
     e.preventDefault();
     const { email } = inputValue;
-    const res = await fetch("/reg", {
+    const res = await fetch("https://demelsbackend.onrender.com/reg", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
