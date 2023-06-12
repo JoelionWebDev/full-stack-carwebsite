@@ -10,6 +10,13 @@ const getAllSubscriber = asyncWrapper(async (req, res) => {
 const subscribe = async (req, res) => {
   try {
     const { email } = req.body;
+
+    //check if name was entered
+    if (!email) {
+      return res.status(400).json({
+        error: "email is required",
+      });
+    }
     // check email
     const exist = await User.findOne({ email });
     if (exist) {

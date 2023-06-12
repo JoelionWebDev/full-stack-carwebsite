@@ -1,7 +1,12 @@
 import "./form.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import useSpinner from "../pages/spinner/useSpinner";
+import { useNavigate } from "react-router-dom";
 const Form = () => {
+  const [spinner, showSpinner, hideSpinner] = useSpinner();
+  const navigate = useNavigate();
+
   const [inputValue, setInputValue] = useState({
     email: "",
   });
@@ -18,6 +23,7 @@ const Form = () => {
 
   const addData = async (e) => {
     e.preventDefault();
+    showSpinner();
     const { email } = inputValue;
     const res = await fetch("https://demelsbackend.onrender.com/reg", {
       method: "POST",
@@ -30,18 +36,23 @@ const Form = () => {
     });
     const data = await res.json();
 
-    if (res.status === 404 || !data) {
-      alert("error");
-      console.log("error");
+    if (res.status === 400 || !data) {
+      navigate("/error");
+      hideSpinner();
     } else {
-      alert("data added");
-      console.log("data added");
+      if (res.status === 409) {
+        navigate("./error");
+        hideSpinner();
+      } else {
+        navigate("/success");
+        hideSpinner();
+      }
     }
   };
   return (
     <main className="formBody">
+      <h2>notify me of new updates</h2>
       <div className="form">
-        <h2>notify me of new updates</h2>
         <label htmlFor="email" className="form-label">
           Email
         </label>
@@ -50,14 +61,15 @@ const Form = () => {
           value={inputValue.email}
           onChange={setdata}
           name="email"
-          className="form-control"
+          className="input"
           id="email"
         />
-        <div>
-          <button type="submit" onClick={addData} className="btn btn-primary">
-            Notify Me
-          </button>
-        </div>
+
+        <button type="submit" onClick={addData} className="btn btn-primary">
+          Notify Me
+        </button>
+
+        {spinner}
       </div>
     </main>
   );

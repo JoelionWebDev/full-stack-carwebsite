@@ -14,7 +14,7 @@
 }
 .welcom {
   position: absolute;
-  margin-top: 6rem;
+  margin-top: 0rem;
 }
 .heroContainer {
   /* background-image: url(../public//images/melo.png); */
@@ -122,7 +122,7 @@ h6 {
   background-color: red;
   padding: 2rem;
   border-radius: 1rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 .button button {
   background-color: red;

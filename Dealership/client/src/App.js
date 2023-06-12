@@ -8,8 +8,8 @@ import Getsub from "./pages/getsub";
 import Home from "./home/Home";
 import Error from "./pages/error";
 import Success from "./pages/success";
-import Success2 from "./pages/success2";
 import Blogs from "./pages/Blogs";
+import Image from "./pages/images";
 import { Toaster } from "react-hot-toast";
 
 import NoPage from "./pages/NoPage";
@@ -25,9 +25,9 @@ const App = () => {
         <Route path="error" element={<Error />} />
         <Route path="getdata" element={<Getdata />} />
         <Route path="getsub" element={<Getsub />} />
+        <Route path="images" element={<Image />} />
 
         <Route path="success" element={<Success />} />
-        <Route path="success2" element={<Success2 />} />
 
         <Route path="*" element={<NoPage />} />
       </Routes>

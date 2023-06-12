@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { people } from "../data/data1";
+import { people } from "../data/data3";
 import "./heroslide.css";
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 const Heroslide = () => {

@@ -12,9 +12,9 @@ const Hero = () => {
           <div className="welcomNote">
             <h1 className="hero1">Demelautos </h1>
             <div className="services">
-              <a href="https://wa.link/859wj7">Buy /</a>
-              <a href="">Sell /</a>
-              <a href="">Swap</a>
+              <a href="https://wa.link/p3l8rj">Buy /</a>
+              <a href="https://wa.link/p3l8rj">Sell /</a>
+              <a href="https://wa.link/p3l8rj">Swap</a>
             </div>
 
             <div className="services2">
@@ -27,7 +27,7 @@ const Hero = () => {
             <div className="button">
               <button>
                 {" "}
-                <a href="https://wa.link/859wj7" style={{ color: "white" }}>
+                <a href="https://wa.link/p3l8rj" style={{ color: "white" }}>
                   GET YOUR OWN TODAY
                 </a>
               </button>
@@ -36,13 +36,16 @@ const Hero = () => {
 
           <h1>
             {" "}
-            <a className="iconn" href="https://www.instagram.com/joeligono/">
+            <a
+              className="iconn"
+              href="https://instagram.com/joecardealer?igshid=ZGUzMzM3NWJiOQ=="
+            >
               <i className="fa-brands fa-instagram"></i>
             </a>
           </h1>
           <h3 className="instwats">instagram</h3>
           <h1>
-            <a className="iconn" href="https://wa.link/859wj7">
+            <a className="iconn" href="https://wa.link/p3l8rj">
               <i
                 style={{ color: "green" }}
                 className="fa-brands fa-whatsapp"
